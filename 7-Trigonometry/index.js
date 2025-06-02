@@ -9,15 +9,15 @@ const centerX = canvas.width / 2;
 const centerY = canvas.height / 2;
 const radius = 100;
 
-const degToRadConstant = 0.0174533;
-
-const angles = [0, 15, 30, 45, 60, 75, 90, 330];
+const angles = [0, 90, 180];
 
 ctx.fillStyle = "maroon";
 
 angles.forEach((each) => {
-  const x = centerX + radius * Math.cos(each * degToRadConstant);
-  const y = centerY + radius * Math.sin(each * degToRadConstant);
+  const angleInRadians = (each * Math.PI) / 180;
+
+  const x = centerX + radius * Math.cos(angleInRadians);
+  const y = centerY + radius * Math.sin(angleInRadians);
 
   ctx.beginPath();
   ctx.arc(x, y, 5, 0, Math.PI * 2);
