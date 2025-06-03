@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+}
+canvas {
+  display: block;
+}
+
+.a {
+  background-color: rgba(254, 245, 240, 255);
+}
