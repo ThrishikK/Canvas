@@ -6,6 +6,7 @@ canvas.height = 500;
 canvas.width = 500;
 
 let size = 1;
+const colorsArray = [];
 
 function returnColor() {
   const r = Math.round(Math.random() * 255);
@@ -23,15 +24,19 @@ function paint() {
   while (y < canvas.height) {
     x = 0;
     while (x < canvas.width) {
-      ctx.fillStyle = returnColor();
+      const color = returnColor();
+      colorsArray.push(color);
+      ctx.fillStyle = color;
       ctx.fillRect(x, y, size, size);
       x += size;
     }
     y += size;
   }
 }
+
 paint();
-// setInterval(paint, 100);
+console.log(colorsArray);
+// setInterval(paint, 1000);
 
 // // Rectangle
 // ctx.fillStyle = returnColor();
