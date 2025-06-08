@@ -2,9 +2,10 @@ body {
   margin: 0;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
   background: black;
 }
 canvas {
